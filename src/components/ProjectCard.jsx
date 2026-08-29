@@ -1,5 +1,6 @@
 import { useState } from "react";
 import VignetteModal from "./VignetteModal";
+import LogoBadge from "./LogoBadge";
 
 export default function ProjectCard({ proyecto, rotate, phone }) {
   const [showVignettes, setShowVignettes] = useState(false);
@@ -9,9 +10,7 @@ export default function ProjectCard({ proyecto, rotate, phone }) {
       <article
         className={`group relative ink-shadow-md border-[5px] border-line bg-panel px-[22px] pb-6 pt-[26px] ${rotate}`}
       >
-        <span className="absolute -top-4 left-[18px] border-[3px] border-line bg-accent px-3 py-0.5 font-display text-xl text-accent-ink">
-          {proyecto.issue}
-        </span>
+        <LogoBadge proyecto={proyecto} className="absolute -top-5 left-[18px] h-12 w-12" />
 
         <h3 className="mb-1 mt-3.5 font-body text-[22px] font-extrabold text-paper">
           {proyecto.nombre}

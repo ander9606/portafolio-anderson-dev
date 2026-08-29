@@ -2,6 +2,7 @@ export const proyectos = [
   {
     id: "logiq360",
     issue: "Issue #01",
+    logo: "logos/logiq360.svg",
     nombre: "logiq360",
     rolLinea: "Inventario, productos y facturación",
     problema:
@@ -35,6 +36,7 @@ export const proyectos = [
   {
     id: "zaturno",
     issue: "Issue #02",
+    logo: "logos/zaturno.png",
     nombre: "Zaturno",
     rolLinea: "Turnos, nómina y geocercas",
     problema:

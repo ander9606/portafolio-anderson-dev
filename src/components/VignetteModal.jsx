@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import VignettePanel from "./VignettePanel";
+import LogoBadge from "./LogoBadge";
 
 export default function VignetteModal({ proyecto, phone, onClose }) {
   const closeRef = useRef(null);
@@ -33,9 +34,7 @@ export default function VignetteModal({ proyecto, phone, onClose }) {
         >
           &times;
         </button>
-        <span className="mb-2 inline-block border-[3px] border-line bg-accent px-3 py-0.5 font-display text-lg text-accent-ink">
-          {proyecto.issue}
-        </span>
+        <LogoBadge proyecto={proyecto} className="mb-3 h-12 w-12" />
         <h4 id={`modal-title-${proyecto.id}`} className="mb-1 font-body text-2xl font-extrabold text-paper">
           {proyecto.nombre}
         </h4>
