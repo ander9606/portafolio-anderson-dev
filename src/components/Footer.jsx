@@ -14,7 +14,7 @@ export default function Footer() {
         &middot;{" "}
         <a
           className="text-paper underline underline-offset-4 hover:text-accent"
-          href="#"
+          href="https://www.linkedin.com/in/janderson-desarrollador-fullstack"
           target="_blank"
           rel="noopener noreferrer"
         >
