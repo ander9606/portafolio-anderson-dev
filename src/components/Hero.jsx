@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import TechBackground from "./TechBackground";
 
 const EMAIL = "anderson960616@gmail.com";
 
@@ -43,6 +44,7 @@ export default function Hero() {
   return (
     <section className="ink-shadow-lg relative mb-12 overflow-hidden border-[6px] border-line bg-panel px-6 py-10 sm:px-10 sm:py-14">
       <div className="halftone" />
+      <TechBackground />
       <div className="relative z-10">
         <span className="mb-4 inline-block -rotate-2 border-[3px] border-line bg-paper px-2.5 py-1 font-mono text-xs font-bold uppercase tracking-widest text-ink">
           Portafolio &mdash; 2026
