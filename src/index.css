@@ -113,3 +113,17 @@ body {
     transition: max-height 0.35s ease, opacity 0.3s ease, padding-top 0.35s ease;
   }
 }
+
+/* skill snippet: hover on devices that truly support it, tap/click toggle everywhere */
+.skill-snippet {
+  display: none;
+  margin-top: 8px;
+}
+.skill-chip[aria-expanded="true"] + .skill-snippet {
+  display: block;
+}
+@media (hover: hover) and (pointer: fine) {
+  .skill-chip:hover + .skill-snippet {
+    display: block;
+  }
+}
