@@ -13,7 +13,7 @@ npm run preview  # previsualizar el build
 
 ## Despliegue
 
-El workflow `.github/workflows/deploy.yml` construye y publica `dist/` en GitHub Pages en cada push a `main`. Actívalo en **Settings → Pages → Source: GitHub Actions**.
+El workflow `.github/workflows/deploy.yml` construye y publica `dist/` en GitHub Pages en cada push a `main` (Settings → Pages → Source: GitHub Actions). Sitio publicado en https://ander9606.github.io/portafolio-anderson-dev/.
 
 ## Contenido pendiente
 
