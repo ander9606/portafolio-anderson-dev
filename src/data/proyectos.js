@@ -12,7 +12,8 @@ export const proyectos = [
       "Se eliminó el doble alquiler del mismo producto en la misma fecha.",
     ],
     chips: ["Express 5", "MySQL", "React 19", "React Query"],
-    repoUrl: "https://github.com/ander9606/aprendizaje-inventario-carpas",
+    repoUrl: null,
+    repoPrivadoNota: "Código privado — datos reales de negocio. Te lo muestro con gusto en la entrevista.",
     landingUrl: "https://logiq360.com/",
     panels: [
       {
