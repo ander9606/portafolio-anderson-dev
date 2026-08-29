@@ -46,7 +46,9 @@ export default function Hero() {
             Descargar CV
           </a>
           <a
-            href="mailto:anderson960616@gmail.com"
+            href="https://wa.me/573204143661?text=Hola%20Anderson%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20contigo"
+            target="_blank"
+            rel="noopener noreferrer"
             className="ink-shadow-sm inline-block border-[3px] border-line bg-accent-2 px-[22px] py-3.5 font-body text-sm font-extrabold uppercase tracking-wide text-accent-ink transition-transform hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1.5 active:translate-y-1.5"
           >
             Hablemos
