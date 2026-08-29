@@ -18,8 +18,6 @@ El workflow `.github/workflows/deploy.yml` construye y publica `dist/` en GitHub
 ## Contenido pendiente
 
 - `public/images/logiq360/` — faltan las 4 capturas reales (`dashboard-operaciones.jpg`, `inventario-categorias.jpg`, `detalle-evento.jpg`, `nueva-cotizacion.jpg`). Mientras no existan, la tarjeta muestra un placeholder "Captura pendiente" automáticamente.
-- `public/cv.pdf` — agregar el CV en PDF; el botón "Descargar CV" ya apunta ahí.
-- Enlace de LinkedIn en el footer (`src/components/Footer.jsx`) — está en `#` hasta tener el usuario real.
 
 ## Estructura
 
