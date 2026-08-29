@@ -26,9 +26,19 @@ export const proyectos = [
         image: "images/logiq360/inventario-categorias.jpg",
       },
       {
+        label: "Analítica de inventario",
+        desc: "2.084 unidades en 26 tipos de elementos, con el valor total del activo en tiempo real ($166.4M) y alertas automáticas de stock bajo por bodega.",
+        image: "images/logiq360/analitica-inventario.jpg",
+      },
+      {
         label: "Catálogo de plantillas",
-        desc: "Cada subcategoría agrupa plantillas listas para cotizar, con código, componentes y precio base — como la carpa 6x9 en sus versiones Compact y Perimetral.",
+        desc: "Cada plantilla lista para cotizar muestra precio, depósito, componentes y disponibilidad en tiempo real — como la carpa 6x9 en sus versiones Compact ($1.890.000) y Perimetral ($282.000).",
         image: "images/logiq360/catalogo-plantillas.jpg",
+      },
+      {
+        label: "Nueva cotización",
+        desc: "Flujo guiado en 6 pasos — evento, productos, transporte, viáticos, descuentos y resumen — para armar una cotización completa.",
+        image: "images/logiq360/nueva-cotizacion.jpg",
       },
       {
         label: "Detalle del evento",
@@ -36,9 +46,9 @@ export const proyectos = [
         image: "images/logiq360/detalle-evento.jpg",
       },
       {
-        label: "Nueva cotización",
-        desc: "Flujo guiado en 6 pasos — evento, productos, transporte, viáticos, descuentos y resumen — para armar una cotización completa.",
-        image: "images/logiq360/nueva-cotizacion.jpg",
+        label: "Reportes y clientes",
+        desc: "Pipeline de cotizaciones con tasa de conversión, ranking de clientes y alertas de clientes que cotizan pero no confirman, para priorizar el seguimiento comercial.",
+        image: "images/logiq360/reportes-clientes.jpg",
       },
     ],
   },

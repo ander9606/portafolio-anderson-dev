@@ -17,7 +17,8 @@ El workflow `.github/workflows/deploy.yml` construye y publica `dist/` en GitHub
 
 ## Contenido pendiente
 
-- `public/images/logiq360/` — faltan las 4 capturas reales (`dashboard-operaciones.jpg`, `inventario-categorias.jpg`, `detalle-evento.jpg`, `nueva-cotizacion.jpg`). Mientras no existan, la tarjeta muestra un placeholder "Captura pendiente" automáticamente.
+- `public/images/logiq360/detalle-evento.jpg` — falta esta captura. Mientras no exista, la tarjeta muestra un placeholder "Captura pendiente" automáticamente.
+- `public/images/logiq360/orden-mantenimiento.jpg`, `planes-suscripcion.jpg` y `productos-alquiler-carpas.jpg` están subidas pero sin panel asignado en `proyectos.js` — quedan disponibles por si se agregan más viñetas.
 
 ## Estructura
 
