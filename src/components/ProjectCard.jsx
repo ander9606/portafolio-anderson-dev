@@ -42,14 +42,23 @@ export default function ProjectCard({ proyecto, rotate, phone }) {
         </ul>
 
         <div className="mb-5 flex flex-wrap items-center gap-4">
-          <a
-            className="inline-flex items-center gap-1.5 border-b-2 border-accent pb-0.5 font-body text-[13px] font-extrabold uppercase tracking-wide text-paper hover:text-accent"
-            href={proyecto.repoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ver repositorio &rarr;
-          </a>
+          {proyecto.repoUrl ? (
+            <a
+              className="inline-flex items-center gap-1.5 border-b-2 border-accent pb-0.5 font-body text-[13px] font-extrabold uppercase tracking-wide text-paper hover:text-accent"
+              href={proyecto.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver repositorio &rarr;
+            </a>
+          ) : (
+            <span
+              className="inline-flex items-center gap-1.5 font-body text-[13px] font-extrabold uppercase tracking-wide text-muted"
+              title={proyecto.repoPrivadoNota}
+            >
+              &#128274; Repositorio privado
+            </span>
+          )}
           <a
             className="inline-flex items-center gap-1.5 border-b-2 border-accent pb-0.5 font-body text-[13px] font-extrabold uppercase tracking-wide text-paper hover:text-accent"
             href={proyecto.landingUrl}
