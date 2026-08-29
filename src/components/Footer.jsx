@@ -1,7 +1,15 @@
 export default function Footer() {
   return (
     <footer className="mt-14 flex flex-wrap justify-between gap-3 border-t-[3px] border-dashed border-panel-2 pt-6 font-mono text-xs text-muted">
-      <span>&copy; {new Date().getFullYear()} Anderson &mdash; construido con café y MySQL.</span>
+      <span>
+        &copy; {new Date().getFullYear()} Anderson &mdash; aquí solucionamos tu problema, no importa el reto.{" "}
+        <a
+          className="text-paper underline underline-offset-4 hover:text-accent"
+          href="mailto:anderson960616@gmail.com"
+        >
+          Contáctame
+        </a>
+      </span>
       <span>
         <a
           className="text-paper underline underline-offset-4 hover:text-accent"

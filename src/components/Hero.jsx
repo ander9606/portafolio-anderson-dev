@@ -45,7 +45,25 @@ export default function Hero() {
           >
             Descargar CV
           </a>
+          <a
+            href="mailto:anderson960616@gmail.com"
+            className="ink-shadow-sm inline-block border-[3px] border-line bg-accent-2 px-[22px] py-3.5 font-body text-sm font-extrabold uppercase tracking-wide text-accent-ink transition-transform hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1.5 active:translate-y-1.5"
+          >
+            Hablemos
+          </a>
         </div>
+
+        <a
+          href="https://github.com/ander9606"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex items-center gap-2 border-2 border-line bg-panel-2 px-3 py-2 font-mono text-[11px] uppercase tracking-wider text-muted hover:border-accent hover:text-accent"
+        >
+          <span className="text-accent" aria-hidden="true">
+            &#9679;
+          </span>
+          Commits activos &mdash; repos actualizados cada semana
+        </a>
       </div>
     </section>
   );

@@ -45,6 +45,31 @@ body {
   box-shadow: 10px 10px 0 var(--color-line);
 }
 
+.vignette-panel {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.vignette-panel:hover {
+  transform: translateY(-4px) rotate(0deg);
+  box-shadow: 10px 10px 0 var(--color-line);
+}
+@media (prefers-reduced-motion: reduce) {
+  .vignette-panel {
+    transition: none;
+  }
+}
+
+.corner-fold {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 26px;
+  height: 26px;
+  z-index: 10;
+  background: linear-gradient(135deg, transparent 50%, var(--color-accent-2) 50%);
+  border-left: 3px solid var(--color-line);
+  border-bottom: 3px solid var(--color-line);
+}
+
 .halftone {
   background-image: radial-gradient(var(--color-accent) 1.4px, transparent 1.6px);
   background-size: 12px 12px;
@@ -71,15 +96,14 @@ body {
   50% { transform: scale(1.06) rotate(4deg); }
 }
 
-/* reveal panel: hidden until the parent .group is hovered/focused */
+/* reveal panel: hidden until toggled open (button-driven, works on touch) */
 .reveal {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   padding-top: 0;
 }
-.group:hover .reveal,
-.group:focus-within .reveal {
+.reveal.is-open {
   max-height: 320px;
   opacity: 1;
   padding-top: 16px;

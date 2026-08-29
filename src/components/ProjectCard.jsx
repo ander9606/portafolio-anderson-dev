@@ -1,14 +1,16 @@
 import { useState } from "react";
+import Chip from "./Chip";
 import VignetteModal from "./VignetteModal";
 import LogoBadge from "./LogoBadge";
 
 export default function ProjectCard({ proyecto, rotate, phone }) {
   const [showVignettes, setShowVignettes] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <>
       <article
-        className={`group relative ink-shadow-md border-[5px] border-line bg-panel px-[22px] pb-6 pt-[26px] ${rotate}`}
+        className={`relative ink-shadow-md border-[5px] border-line bg-panel px-[22px] pb-6 pt-[26px] ${rotate}`}
       >
         <LogoBadge proyecto={proyecto} className="absolute -top-5 left-[18px] h-12 w-12" />
 
@@ -19,18 +21,27 @@ export default function ProjectCard({ proyecto, rotate, phone }) {
           {proyecto.rolLinea}
         </p>
 
-        <div className="mb-5 flex flex-wrap gap-2">
+        <div className="mb-4 flex flex-wrap gap-2">
           {proyecto.chips.map((chip) => (
-            <span
-              key={chip}
-              className="border-2 border-accent bg-accent/10 px-2.5 py-1 font-mono text-[11.5px] font-semibold text-accent"
-            >
-              {chip}
-            </span>
+            <Chip key={chip}>{chip}</Chip>
           ))}
         </div>
 
-        <div className="flex flex-wrap items-center gap-4">
+        <ul className="mb-5 space-y-1.5">
+          {proyecto.resultados.map((resultado) => (
+            <li
+              key={resultado}
+              className="flex items-start gap-2 text-[13.5px] leading-snug text-paper-dim"
+            >
+              <span className="mt-0.5 text-accent-2" aria-hidden="true">
+                &#10003;
+              </span>
+              {resultado}
+            </li>
+          ))}
+        </ul>
+
+        <div className="mb-5 flex flex-wrap items-center gap-4">
           <a
             className="inline-flex items-center gap-1.5 border-b-2 border-accent pb-0.5 font-body text-[13px] font-extrabold uppercase tracking-wide text-paper hover:text-accent"
             href={proyecto.repoUrl}
@@ -49,7 +60,16 @@ export default function ProjectCard({ proyecto, rotate, phone }) {
           </a>
         </div>
 
-        <div className="reveal">
+        <button
+          type="button"
+          onClick={() => setExpanded((v) => !v)}
+          aria-expanded={expanded}
+          className="inline-flex items-center gap-1.5 border-2 border-line bg-panel-2 px-3 py-1.5 font-mono text-[11.5px] font-bold uppercase tracking-wider text-paper hover:border-accent hover:text-accent"
+        >
+          {expanded ? "Ver menos ▲" : "El problema y las capturas ▾"}
+        </button>
+
+        <div className={`reveal ${expanded ? "is-open" : ""}`}>
           <span className="mb-2 inline-block border-2 border-line bg-accent-2 px-2 py-0.5 font-mono text-[10.5px] font-bold uppercase tracking-wider text-accent-ink">
             El problema
           </span>
