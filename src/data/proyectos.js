@@ -21,6 +21,11 @@ export const proyectos = [
         image: "images/logiq360/inventario-categorias.jpg",
       },
       {
+        label: "Catálogo de plantillas",
+        desc: "Cada subcategoría agrupa plantillas listas para cotizar, con código, componentes y precio base — como la carpa 6x9 en sus versiones Compact y Perimetral.",
+        image: "images/logiq360/catalogo-plantillas.jpg",
+      },
+      {
         label: "Detalle del evento",
         desc: "Cliente, fechas y ubicación de cada evento, con el resumen financiero de sus cotizaciones y cuáles siguen pendientes de aprobación.",
         image: "images/logiq360/detalle-evento.jpg",

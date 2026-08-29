@@ -42,9 +42,9 @@ export default function VignetteModal({ proyecto, phone, onClose }) {
         <p className="mb-5 font-mono text-[13px] font-bold uppercase tracking-wide text-accent-2">
           Capturas
         </p>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {proyecto.panels.map((panel) => (
-            <VignettePanel key={panel.label} panel={panel} phone={phone} />
+        <div className="grid grid-cols-1 gap-x-5 gap-y-9 pt-2 sm:grid-cols-2">
+          {proyecto.panels.map((panel, index) => (
+            <VignettePanel key={panel.label} panel={panel} phone={phone} index={index} />
           ))}
         </div>
       </div>
