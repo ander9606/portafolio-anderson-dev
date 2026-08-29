@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bangers", cursive;
+  --font-body: "Archivo", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-ink: #08080b;
+  --color-bg: #0e0e15;
+  --color-panel: #18181f;
+  --color-panel-2: #1f1f29;
+  --color-paper: #f4ecd8;
+  --color-paper-dim: #cfc7b2;
+  --color-muted: #9b94a8;
+  --color-line: #050506;
+  --color-accent: #ff3b3f;
+  --color-accent-2: #ffcf3f;
+  --color-accent-ink: #0b0b0e;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 20% -10%, rgb(255 255 255 / 5%), transparent 40%),
+    radial-gradient(ellipse at 100% 110%, rgb(255 255 255 / 4%), transparent 45%),
+    var(--color-bg);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+/* comic ink-shadow, reused on panels/buttons via data attribute sizes */
+.ink-shadow-sm {
+  box-shadow: 5px 5px 0 var(--color-line);
+}
+.ink-shadow-md {
+  box-shadow: 8px 8px 0 var(--color-line);
+}
+.ink-shadow-lg {
+  box-shadow: 10px 10px 0 var(--color-line);
+}
+
+.halftone {
+  background-image: radial-gradient(var(--color-accent) 1.4px, transparent 1.6px);
+  background-size: 12px 12px;
+  opacity: 0.22;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.burst {
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
+    50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+  );
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .burst-anim {
+    animation: burst-pulse 3.2s ease-in-out infinite;
+  }
+}
+@keyframes burst-pulse {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.06) rotate(4deg); }
+}
+
+/* reveal panel: hidden until the parent .group is hovered/focused */
+.reveal {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding-top: 0;
+}
+.group:hover .reveal,
+.group:focus-within .reveal {
+  max-height: 320px;
+  opacity: 1;
+  padding-top: 16px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    transition: max-height 0.35s ease, opacity 0.3s ease, padding-top 0.35s ease;
+  }
+}
