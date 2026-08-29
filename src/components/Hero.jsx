@@ -124,6 +124,14 @@ export default function Hero() {
               </div>
             )}
           </div>
+          <a
+            href="https://www.linkedin.com/in/janderson-desarrollador-fullstack"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block border-[3px] border-line bg-panel px-[22px] py-3.5 font-body text-sm font-extrabold uppercase tracking-wide text-paper transition-transform hover:translate-x-0.5 hover:translate-y-0.5"
+          >
+            LinkedIn
+          </a>
         </div>
 
         <a
