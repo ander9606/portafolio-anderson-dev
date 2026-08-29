@@ -22,11 +22,11 @@ export default function SkillChip({ name, isOpen, onToggle }) {
       >
         {name}
       </button>
-      <div className="skill-snippet basis-full border-[3px] border-line bg-ink">
-        <p className="border-b-[3px] border-dashed border-line/60 bg-panel-2 px-3 py-1.5 font-mono text-[10.5px] uppercase tracking-wider text-accent-2">
+      <div className="skill-snippet min-w-0 basis-full border-[3px] border-line bg-ink">
+        <p className="break-words border-b-[3px] border-dashed border-line/60 bg-panel-2 px-3 py-1.5 font-mono text-[10.5px] uppercase tracking-wider text-accent-2">
           {snippet.source}
         </p>
-        <pre className="overflow-x-auto px-3 py-3 text-[12px] leading-relaxed text-paper-dim">
+        <pre className="max-h-80 overflow-y-auto whitespace-pre-wrap break-words px-3 py-3 text-[12px] leading-relaxed text-paper-dim">
           <code>{snippet.code}</code>
         </pre>
       </div>
