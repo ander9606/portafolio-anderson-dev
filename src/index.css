@@ -96,15 +96,14 @@ body {
   50% { transform: scale(1.06) rotate(4deg); }
 }
 
-/* reveal panel: hidden until the parent .group is hovered/focused */
+/* reveal panel: hidden until toggled open (button-driven, works on touch) */
 .reveal {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   padding-top: 0;
 }
-.group:hover .reveal,
-.group:focus-within .reveal {
+.reveal.is-open {
   max-height: 320px;
   opacity: 1;
   padding-top: 16px;

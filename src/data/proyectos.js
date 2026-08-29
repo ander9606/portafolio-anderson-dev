@@ -6,6 +6,10 @@ export const proyectos = [
     rolLinea: "Inventario, productos y facturación",
     problema:
       "Llevar el inventario de carpas y las cotizaciones en Excel y WhatsApp no escala: se pierden reservas, se dañan series y nadie sabe qué hay disponible. logiq360 centraliza inventario, cotizaciones, alquileres y facturación electrónica DIAN en un solo sistema — en producción para Carpas Vento.",
+    resultados: [
+      "Una cotización pasó de tomar ~20 min a 2–3 min.",
+      "Se eliminó el doble alquiler del mismo producto en la misma fecha.",
+    ],
     chips: ["Express 5", "MySQL", "React 19", "React Query"],
     repoUrl: "https://github.com/ander9606/aprendizaje-inventario-carpas",
     landingUrl: "https://logiq360.com/",
@@ -44,6 +48,10 @@ export const proyectos = [
     rolLinea: "Turnos, nómina y geocercas",
     problema:
       "Cuadrar turnos, marcar asistencia real y liquidar nómina con recargos legales a mano genera errores y reclamos. Zaturno automatiza geocercas de marcaje, jornadas y liquidación multi-tenant para equipos de campo.",
+    resultados: [
+      "Se acabaron los cobros imprevistos por turnos mal registrados o poco claros.",
+      "Se redujo el tiempo para armar la nómina.",
+    ],
     chips: ["Express", "React Native", "Expo", "MySQL"],
     repoUrl: "https://github.com/ander9606/appturnos",
     landingUrl: "https://zaturno.app/",

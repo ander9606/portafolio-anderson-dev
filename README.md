@@ -23,8 +23,8 @@ El workflow `.github/workflows/deploy.yml` construye y publica `dist/` en GitHub
 
 ```
 src/
-├── components/   # Hero, ProjectCard, VignetteModal, VignettePanel, Footer
-├── data/         # proyectos.js — contenido de cada proyecto
+├── components/   # Hero, Skills, ProjectCard, Chip, VignetteModal, VignettePanel, Footer
+├── data/         # proyectos.js, skills.js — contenido del sitio
 ├── App.jsx
 └── index.css     # tokens de diseño (paleta, fuentes, efectos cómic)
 ```

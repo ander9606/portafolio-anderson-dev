@@ -1,4 +1,5 @@
 import Hero from "./components/Hero";
+import Skills from "./components/Skills";
 import ProjectCard from "./components/ProjectCard";
 import Footer from "./components/Footer";
 import { proyectos } from "./data/proyectos";
@@ -16,6 +17,8 @@ export default function App() {
       </div>
 
       <Hero />
+
+      <Skills />
 
       <p className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-muted">Proyectos</p>
       <div className="grid grid-cols-1 items-start gap-7 lg:grid-cols-2">
