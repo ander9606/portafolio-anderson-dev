@@ -1,4 +1,29 @@
+import { useEffect, useRef, useState } from "react";
+
 export default function Hero() {
+  const [showContact, setShowContact] = useState(false);
+  const contactRef = useRef(null);
+
+  useEffect(() => {
+    if (!showContact) return;
+
+    function handleClickOutside(event) {
+      if (contactRef.current && !contactRef.current.contains(event.target)) {
+        setShowContact(false);
+      }
+    }
+    function handleEscape(event) {
+      if (event.key === "Escape") setShowContact(false);
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [showContact]);
+
   return (
     <section className="ink-shadow-lg relative mb-12 overflow-hidden border-[6px] border-line bg-panel px-6 py-10 sm:px-10 sm:py-14">
       <div className="halftone" />
@@ -45,12 +70,44 @@ export default function Hero() {
           >
             Descargar CV
           </a>
-          <a
-            href="mailto:anderson960616@gmail.com"
-            className="ink-shadow-sm inline-block border-[3px] border-line bg-accent-2 px-[22px] py-3.5 font-body text-sm font-extrabold uppercase tracking-wide text-accent-ink transition-transform hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1.5 active:translate-y-1.5"
-          >
-            Hablemos
-          </a>
+          <div ref={contactRef} className="relative">
+            <button
+              type="button"
+              onClick={() => setShowContact((v) => !v)}
+              aria-expanded={showContact}
+              aria-haspopup="true"
+              className="ink-shadow-sm inline-block border-[3px] border-line bg-accent-2 px-[22px] py-3.5 font-body text-sm font-extrabold uppercase tracking-wide text-accent-ink transition-transform hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1.5 active:translate-y-1.5"
+            >
+              Hablemos
+            </button>
+
+            {showContact && (
+              <div className="ink-shadow-sm absolute left-0 top-[calc(100%+10px)] z-20 min-w-[240px] border-[3px] border-line bg-panel-2 p-2 font-mono text-xs">
+                <a
+                  href="https://wa.me/573204143661?text=Hola%20Anderson%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20contigo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setShowContact(false)}
+                  className="flex items-center gap-2 border-2 border-transparent px-2.5 py-2 uppercase tracking-wider text-paper hover:border-accent hover:text-accent"
+                >
+                  <span className="text-accent-2" aria-hidden="true">
+                    &gt;
+                  </span>
+                  contactar --whatsapp
+                </a>
+                <a
+                  href="mailto:anderson960616@gmail.com"
+                  onClick={() => setShowContact(false)}
+                  className="flex items-center gap-2 border-2 border-transparent px-2.5 py-2 uppercase tracking-wider text-paper hover:border-accent hover:text-accent"
+                >
+                  <span className="text-accent-2" aria-hidden="true">
+                    &gt;
+                  </span>
+                  contactar --correo
+                </a>
+              </div>
+            )}
+          </div>
         </div>
 
         <a
