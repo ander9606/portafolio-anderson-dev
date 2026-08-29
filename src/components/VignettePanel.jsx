@@ -27,13 +27,13 @@ export default function VignettePanel({ panel, phone, index = 0 }) {
       >
         {!failed ? (
           <>
+            <div className="halftone opacity-20" />
             <img
               src={import.meta.env.BASE_URL + panel.image}
               alt={panel.label}
               onError={() => setFailed(true)}
-              className={`h-full w-full ${phone ? "object-contain p-2" : "object-cover"}`}
+              className={`relative h-full w-full ${phone ? "object-contain p-2" : "object-cover"}`}
             />
-            <div className="halftone opacity-[0.06] mix-blend-overlay" />
           </>
         ) : (
           <>
