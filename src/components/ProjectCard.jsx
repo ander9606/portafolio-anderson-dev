@@ -10,7 +10,7 @@ export default function ProjectCard({ proyecto, rotate, phone }) {
   return (
     <>
       <article
-        className={`relative ink-shadow-md border-[5px] border-line bg-panel px-[22px] pb-6 pt-[26px] ${rotate}`}
+        className={`project-card relative ink-shadow-md border-[5px] border-line bg-panel px-[22px] pb-6 pt-[26px] ${rotate}`}
       >
         <LogoBadge proyecto={proyecto} className="absolute -top-5 left-[18px] h-12 w-12" />
 
