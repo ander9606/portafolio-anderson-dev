@@ -108,6 +108,13 @@ body {
   opacity: 1;
   padding-top: 16px;
 }
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover .reveal {
+    max-height: 320px;
+    opacity: 1;
+    padding-top: 16px;
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
   .reveal {
     transition: max-height 0.35s ease, opacity 0.3s ease, padding-top 0.35s ease;
