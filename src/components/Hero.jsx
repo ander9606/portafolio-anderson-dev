@@ -1,8 +1,24 @@
 import { useEffect, useRef, useState } from "react";
 
+const EMAIL = "anderson960616@gmail.com";
+
 export default function Hero() {
   const [showContact, setShowContact] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
   const contactRef = useRef(null);
+
+  async function handleEmailClick() {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setEmailCopied(true);
+      setTimeout(() => {
+        setEmailCopied(false);
+        setShowContact(false);
+      }, 1400);
+    } catch {
+      setShowContact(false);
+    }
+  }
 
   useEffect(() => {
     if (!showContact) return;
@@ -96,14 +112,14 @@ export default function Hero() {
                   contactar --whatsapp
                 </a>
                 <a
-                  href="mailto:anderson960616@gmail.com"
-                  onClick={() => setShowContact(false)}
+                  href={`mailto:${EMAIL}`}
+                  onClick={handleEmailClick}
                   className="flex items-center gap-2 border-2 border-transparent px-2.5 py-2 uppercase tracking-wider text-paper hover:border-accent hover:text-accent"
                 >
                   <span className="text-accent-2" aria-hidden="true">
                     &gt;
                   </span>
-                  contactar --correo
+                  {emailCopied ? "¡correo copiado!" : "contactar --correo"}
                 </a>
               </div>
             )}
