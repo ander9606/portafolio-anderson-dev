@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import ProjectCard from "./components/ProjectCard";
+import ZaturnoDetalle from "./components/ZaturnoDetalle";
+import Servicios from "./components/Servicios";
 import Footer from "./components/Footer";
 import { proyectos } from "./data/proyectos";
 
@@ -44,13 +46,17 @@ export default function App() {
 
       <Hero />
 
-      <Skills />
-
       <p className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-muted">Proyectos</p>
       <div className="grid grid-cols-1 items-start gap-7 lg:grid-cols-2">
         <ProjectCard proyecto={proyectos[0]} rotate="-rotate-[0.6deg]" phone={false} />
         <ProjectCard proyecto={proyectos[1]} rotate="rotate-[0.6deg]" phone={true} />
       </div>
+
+      <ZaturnoDetalle />
+
+      <Servicios />
+
+      <Skills />
 
       <Footer />
     </div>

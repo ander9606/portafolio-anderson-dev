@@ -60,7 +60,7 @@ export const proyectos = [
     nombre: "Zaturno",
     rolLinea: "Turnos, nómina y geocercas",
     problema:
-      "Cuadrar turnos, marcar asistencia real y liquidar nómina con recargos legales a mano genera errores y reclamos. Zaturno automatiza geocercas de marcaje, jornadas y liquidación multi-tenant para equipos de campo.",
+      "Cuadrar turnos, marcar asistencia real y liquidar nómina con recargos legales a mano genera errores y reclamos. Zaturno automatiza geocercas de marcaje, jornadas y liquidación multi-tenant para equipos de campo — en producción, usado por empresas reales.",
     resultados: [
       "Se acabaron los cobros imprevistos por turnos mal registrados o poco claros.",
       "Se redujo el tiempo para armar la nómina.",
