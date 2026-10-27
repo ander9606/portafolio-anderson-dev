@@ -65,10 +65,10 @@ export default function Hero() {
             aria-hidden="true"
           />
           <p className="relative z-10 max-w-[52ch] border-[3px] border-line bg-panel-2 px-[18px] py-3.5 text-[15px] leading-relaxed text-paper sm:text-lg">
-            Construyo sistemas que corren en producción de verdad:{" "}
-            <strong className="text-accent">inventario y alquileres</strong> para un negocio de
-            eventos, y <strong className="text-accent">turnos + nómina</strong> multi&#8209;tenant
-            con geocercas.
+            Mis sistemas ya están en <strong className="text-accent">producción</strong>,
+            resolviéndole el día a día a empresas reales: <strong className="text-accent">Zaturno</strong>{" "}
+            para turnos y nómina, y <strong className="text-accent">logiq360</strong> para inventario
+            y alquileres. Puedo construir apps como estas, o más complejas, para tu negocio.
           </p>
         </div>
 
