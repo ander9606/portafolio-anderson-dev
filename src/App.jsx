@@ -4,6 +4,7 @@ import Skills from "./components/Skills";
 import ProjectCard from "./components/ProjectCard";
 import ZaturnoDetalle from "./components/ZaturnoDetalle";
 import Servicios from "./components/Servicios";
+import SobreMi from "./components/SobreMi";
 import Footer from "./components/Footer";
 import { proyectos } from "./data/proyectos";
 
@@ -55,6 +56,8 @@ export default function App() {
       <ZaturnoDetalle />
 
       <Servicios />
+
+      <SobreMi />
 
       <Skills />
 
