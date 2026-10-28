@@ -6,12 +6,16 @@ export default function VignetteModal({ proyecto, phone, onClose }) {
   const closeRef = useRef(null);
 
   useEffect(() => {
+    const opener = document.activeElement;
     closeRef.current?.focus();
     function onKey(e) {
       if (e.key === "Escape") onClose();
     }
     document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      opener?.focus();
+    };
   }, [onClose]);
 
   return (
