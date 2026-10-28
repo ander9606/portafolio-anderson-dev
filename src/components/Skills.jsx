@@ -7,7 +7,7 @@ export default function Skills() {
 
   return (
     <section className="mb-12">
-      <p className="mb-4 font-mono text-xs uppercase tracking-[0.16em] text-muted">Skills</p>
+      <h2 className="mb-4 font-mono text-xs font-normal uppercase tracking-[0.16em] text-muted">Skills</h2>
       <p className="mb-4 -mt-2 text-[13px] text-paper-dim">
         Pasa el cursor (o toca en móvil) sobre una tecnología para ver cómo se usó de verdad.
       </p>

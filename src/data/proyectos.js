@@ -42,14 +42,19 @@ export const proyectos = [
         image: "images/logiq360/nueva-cotizacion.jpg",
       },
       {
-        label: "Detalle del evento",
-        desc: "Cliente, fechas y ubicación de cada evento, con el resumen financiero de sus cotizaciones y cuáles siguen pendientes de aprobación.",
-        image: "images/logiq360/detalle-evento.jpg",
-      },
-      {
         label: "Reportes y clientes",
         desc: "Pipeline de cotizaciones con tasa de conversión, ranking de clientes y alertas de clientes que cotizan pero no confirman, para priorizar el seguimiento comercial.",
         image: "images/logiq360/reportes-clientes.jpg",
+      },
+      {
+        label: "Órdenes de mantenimiento",
+        desc: "Cada orden guía el siguiente paso, lista los elementos en mantenimiento por lote, permite asignar responsable y guardar fotos del trabajo.",
+        image: "images/logiq360/orden-mantenimiento.jpg",
+      },
+      {
+        label: "Planes de suscripción",
+        desc: "Cada empresa ve su plan, lo que incluye y lo que no, y puede cambiarlo desde el sistema; el límite de empleados y de elementos se aplica según el plan.",
+        image: "images/logiq360/planes-suscripcion.jpg",
       },
     ],
   },
